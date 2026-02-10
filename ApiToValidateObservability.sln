@@ -2,8 +2,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstApi", "FirstApi\FirstApi.csproj", "{D8EA3D42-EEBB-4081-8CDB-11345E8885AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTelemetryConfigs", "OpenTelemetryConfigs\OpenTelemetryConfigs.csproj", "{8249CD31-B7C1-4088-89A9-5B66C5F1C322}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecondApi", "SecondApi\SecondApi.csproj", "{7E7C992A-B583-457A-92F8-5C73391460E2}"
 EndProject
 Global
@@ -16,10 +14,6 @@ Global
 		{D8EA3D42-EEBB-4081-8CDB-11345E8885AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8EA3D42-EEBB-4081-8CDB-11345E8885AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8EA3D42-EEBB-4081-8CDB-11345E8885AE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8249CD31-B7C1-4088-89A9-5B66C5F1C322}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8249CD31-B7C1-4088-89A9-5B66C5F1C322}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8249CD31-B7C1-4088-89A9-5B66C5F1C322}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8249CD31-B7C1-4088-89A9-5B66C5F1C322}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7E7C992A-B583-457A-92F8-5C73391460E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7E7C992A-B583-457A-92F8-5C73391460E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E7C992A-B583-457A-92F8-5C73391460E2}.Release|Any CPU.ActiveCfg = Release|Any CPU

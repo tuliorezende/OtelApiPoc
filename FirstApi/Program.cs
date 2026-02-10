@@ -1,5 +1,6 @@
 using System.Reflection;
-using OpenTelemetryConfigs;
+using StandardDependencies.Injection;
+using StandardDependencies.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,13 +16,23 @@ builder.Services.AddSwaggerGen(options =>
     options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
 
-builder.Services.AddHttpClient("FirstApi", client =>
-{
-    client.BaseAddress = new Uri("http://localhost:5277");
-});
+builder.Services.AddHttpClient("FirstApi", client => { client.BaseAddress = new Uri("http://localhost:5277"); });
 
 // ARTIGO BASE: https://medium.com/@faulycoelho/implementing-observability-in-a-net-applications-logging-tracing-and-metrics-67fe5b58312d
-builder.ConfigureCommon("FirstApi");
+
+// Reading the configurations        
+var swaggerOptions = builder
+    .Configuration
+    .GetSection(SwaggerOptions.SectionName)
+    .Get<SwaggerOptions>();
+
+var openTelemetryOptions = builder
+    .Configuration
+    .GetSection(OpenTelemetryOptions.SectionName)
+    .Get<OpenTelemetryOptions>();
+
+// Using the lib
+builder.ConfigureCommonElements(openTelemetryOptions, swaggerOptions);
 
 var app = builder.Build();
 

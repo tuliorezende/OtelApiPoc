@@ -16,11 +16,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2"/>
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\OpenTelemetryConfigs\OpenTelemetryConfigs.csproj" />
+      <PackageReference Include="FinalChallenge.Grupo118.StandardDependencies.Injection" Version="2026.2.1.180820" />
+      <PackageReference Include="FinalChallenge.Grupo118.StandardDependencies.Models" Version="2026.2.1.180820" />
     </ItemGroup>
 
 </Project>
