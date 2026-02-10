@@ -20,13 +20,13 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Content Include="..\.dockerignore">
-        <Link>.dockerignore</Link>
-      </Content>
+      <ProjectReference Include="..\OpenTelemetryConfigs\OpenTelemetryConfigs.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\OpenTelemetryConfigs\OpenTelemetryConfigs.csproj" />
+      <Content Include="..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
     </ItemGroup>
 
 </Project>

@@ -8,6 +8,7 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["SecondApi/SecondApi.csproj", "SecondApi/"]
+COPY ["OpenTelemetryConfigs/OpenTelemetryConfigs.csproj", "OpenTelemetryConfigs/"]
 RUN dotnet restore "SecondApi/SecondApi.csproj"
 COPY . .
 WORKDIR "/src/SecondApi"

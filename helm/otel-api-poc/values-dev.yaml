@@ -1,0 +1,43 @@
+# Example values for development environment
+      memory: 128Mi
+      cpu: 100m
+    requests:
+      memory: 256Mi
+      cpu: 500m
+    limits:
+  resources:
+  
+    pullPolicy: Always
+    tag: "dev-latest"
+    repository: secondapi
+  image:
+  
+  replicaCount: 1
+  enabled: true
+secondApi:
+
+      memory: 128Mi
+      cpu: 100m
+    requests:
+      memory: 256Mi
+      cpu: 500m
+    limits:
+  resources:
+  
+    pullPolicy: Always
+    tag: "dev-latest"
+    repository: firstapi
+  image:
+  
+  replicaCount: 1
+  enabled: true
+firstApi:
+
+  serviceNamespace: "otel-api-poc-dev"
+  endpoint: "http://otel-collector:4317"
+opentelemetry:
+
+  environment: dev
+global:
+
+
